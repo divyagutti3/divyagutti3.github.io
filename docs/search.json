@@ -4,14 +4,7 @@
     "href": "cv.html",
     "title": "CV",
     "section": "",
-    "text": "My CV will be available here."
-  },
-  {
-    "objectID": "cv.html#curriculum-vitae",
-    "href": "cv.html#curriculum-vitae",
-    "title": "CV",
-    "section": "",
-    "text": "My CV will be available here."
+    "text": "[Download PDF](cv.pdf){.btn .btn-primary}"
   },
   {
     "objectID": "index.html",
