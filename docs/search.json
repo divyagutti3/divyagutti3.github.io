@@ -4,7 +4,7 @@
     "href": "cv.html",
     "title": "CV",
     "section": "",
-    "text": "[Download PDF](cv.pdf){.btn .btn-primary}"
+    "text": "Download PDF"
   },
   {
     "objectID": "index.html",
@@ -12,6 +12,13 @@
     "title": "Divya Gutti",
     "section": "",
     "text": "I am a Master’s student in Social Data Analytics and Research at the University of Texas at Dallas. My research interests focus on how emerging technologies affect institutions, decision-making, and security."
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "I am currently developing my research interests in social data analytics, emerging technologies, and cybersecurity\nI am particularly interested in how institutions respond to new technological risks and how data can be used to study those responses"
   },
   {
     "objectID": "teaching.html",
@@ -28,11 +35,11 @@
     "text": "Teaching information will be added here."
   },
   {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research",
+    "objectID": "assignment01.html",
+    "href": "assignment01.html",
+    "title": "Website Design Note",
     "section": "",
-    "text": "I am currently developing my research interests in social data analytics, emerging technologies, and cybersecurity\nI am particularly interested in how institutions respond to new technological risks and how data can be used to study those responses"
+    "text": "I created this website using RStudio and Quarto and published it through GitHub Pages. My goal was to make the site simple, professional, and easy to navigate while still leaving room to add more academic work in the future.\nFor the overall appearance, I chose the Litera theme because it has a clean and readable style that works well for an academic website. On the homepage, I used the jolla layout along with a profile image, a short introduction, my research interests, and links to my email and GitHub profile.\nThe navigation bar includes Home, Research, Teaching, CV, and Assignments.The Research page will be updated as I complete projects in class, and the Teaching page is available for future teaching-related experience. The CV page includes a PDF version of my résumé that can be viewed or downloaded directly from the website.\nThe website is rendered in Quarto and published from the docs folder through GitHub Pages. This setup makes it easy to update the site later. I can edit the Quarto files in RStudio, render the website again, and upload the updated files to GitHub."
   },
   {
     "objectID": "about.html",
