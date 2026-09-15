@@ -14,11 +14,32 @@
     "text": "I am a Master’s student in Social Data Analytics and Research at the University of Texas at Dallas. My research interests focus on how emerging technologies affect institutions, decision-making, and security."
   },
   {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research",
+    "objectID": "assignment02.html",
+    "href": "assignment02.html",
+    "title": "Assignment 2: Google Trends",
     "section": "",
-    "text": "I am currently developing my research interests in social data analytics, emerging technologies, and cybersecurity\nI am particularly interested in how institutions respond to new technological risks and how data can be used to study those responses"
+    "text": "Search terms: Trump, Kamala Harris, Election\nGeography: United States\nTime window: Past 5 years\nCategory: All categories\nSearch type: Web Search\nDate pulled: September 15, 2026\nTime pulled: 12:03 PM\n\n\n\n\n\nSearch term: Strait of Hormuz\nGeography: United States\nTime window: Past 5 years\nCategory: All categories\nSearch type: Web Search\nDate pulled: September 15, 2026\nTime pulled: 12:07 PM"
+  },
+  {
+    "objectID": "assignment02.html#query-parameters",
+    "href": "assignment02.html#query-parameters",
+    "title": "Assignment 2: Google Trends",
+    "section": "",
+    "text": "Search terms: Trump, Kamala Harris, Election\nGeography: United States\nTime window: Past 5 years\nCategory: All categories\nSearch type: Web Search\nDate pulled: September 15, 2026\nTime pulled: 12:03 PM\n\n\n\n\n\nSearch term: Strait of Hormuz\nGeography: United States\nTime window: Past 5 years\nCategory: All categories\nSearch type: Web Search\nDate pulled: September 15, 2026\nTime pulled: 12:07 PM"
+  },
+  {
+    "objectID": "assignment02.html#google-trends-in-r",
+    "href": "assignment02.html#google-trends-in-r",
+    "title": "Assignment 2: Google Trends",
+    "section": "Google Trends in R",
+    "text": "Google Trends in R\nI used the provided gtrendsR script to reproduce the Google Trends query in R. I worked from the first successful pull because repeated requests can be rate-limited.\n\nlibrary(gtrendsR)\nlibrary(readr)\n\nTrumpHarrisElection &lt;- gtrends(\n  c(\"Trump\", \"Harris\", \"election\"),\n  onlyInterest = TRUE,\n  geo = \"US\",\n  gprop = \"web\",\n  time = \"today+5-y\",\n  category = 0\n)\n\nthe_df &lt;- TrumpHarrisElection$interest_over_time\n\nplot(TrumpHarrisElection)\n\nFor the final plot, I used the CSV saved from my successful R pull.\n\nlibrary(readr)\nlibrary(ggplot2)\n\nthe_df &lt;- read_csv(\n  \"gtrends_us_5y_2026-09-15.csv\",\n  show_col_types = FALSE\n)\n\nthe_df$date &lt;- as.Date(the_df$date)\nthe_df$hits_num &lt;- parse_number(as.character(the_df$hits))\n\nggplot(\n  the_df,\n  aes(\n    x = date,\n    y = hits_num,\n    color = keyword\n  )\n) +\n  geom_line(linewidth = 0.8) +\n  labs(\n    title = \"Google Trends Interest Over Time\",\n    x = \"Date\",\n    y = \"Relative Search Interest\",\n    color = \"Search Term\"\n  ) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "assignment02.html#comparison",
+    "href": "assignment02.html#comparison",
+    "title": "Assignment 2: Google Trends",
+    "section": "Comparison",
+    "text": "Comparison\nI also ran the same R query twice. In my test, the two interest_over_time data frames were identical. However, Google Trends uses sampled data, so repeated pulls are not guaranteed to always match.\nThe website and R methods use the same Google Trends source, but they are not identical in how the query is recorded and reproduced. The website method requires the user to manually record the search terms, geography, time window, category, and search type. In R, those choices are written directly into the code, which makes the query easier to reproduce and scale.\nThe R approach is also more practical when working with many search terms or countries because the same code can be modified and rerun. The website method is easier for a small number of searches, but it becomes more time-consuming as the number of queries increases.\nThe assignment also compares the search terms “Harris” and “Kamala Harris.” These are not the same concept because “Harris” can refer to many different people, places, and organizations. This shows that the exact search term matters when using Google Trends as a measure of public interest.\nI also ran the same R query twice. In my test, the two interest_over_time data frames were identical. However, Google Trends uses sampled search data, so identical results in one test do not guarantee that every future pull will return exactly the same values. The R method provides better reproducibility and is easier to scale, while the website method is simpler for quick manual searches."
   },
   {
     "objectID": "teaching.html",
@@ -33,6 +54,13 @@
     "title": "Teaching",
     "section": "",
     "text": "Teaching information will be added here."
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "I am currently developing my research interests in social data analytics, emerging technologies, and cybersecurity\nI am particularly interested in how institutions respond to new technological risks and how data can be used to study those responses"
   },
   {
     "objectID": "assignment01.html",
