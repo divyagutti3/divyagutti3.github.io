@@ -309,7 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The website CSV covered September 2021 through September 2026 and used monthly observations. Changing the time window changed the reporting interval. Removing one search term also changed the values for the remaining terms because Google Trends rescales results within each query.</p>
 <p>The search terms “Harris” and “Kamala Harris” did not represent the same concept. “Harris” is more ambiguous and can refer to many people, places, or organizations, showing that search-term choice affects what is being measured.</p>
 <p>I also ran the same R query twice, and the two <code>interest_over_time</code> data frames were identical in my test. However, Google Trends uses sampled data, so repeated pulls are not guaranteed to always match.</p>
-<p>For provenance, R makes the query easier to document because the parameters are stored directly in the code.The R object returned additional data on country, region, DMA, city, related topics, and related queries that were not included in the basic website CSV.</p>
+<p>For provenance, R makes the query easier to document because the parameters are stored directly in the code. For fragility, both methods depend on Google Trends, while the R method can also be affected by rate limits or changes to the service. The R object returned additional data on country, region, DMA, city, related topics, and related queries that were not included in the basic website CSV.</p>
 
 
 </section>
